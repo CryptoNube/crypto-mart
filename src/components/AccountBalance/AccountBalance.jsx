@@ -61,7 +61,7 @@ export default function AccountBalance(props) {
             </HideShowBalance>
             <Button 
             className = 'btn'
-            onClick = {props.depositOneThousand}>
+            onClick = {props.loadWallet}>
               <I className="fas fa-money-bill-alt"></I>
             </Button>
         </Section>

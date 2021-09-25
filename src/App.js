@@ -51,7 +51,8 @@ function App(props) {
     } 
   })
 
-  const depositOneThousand = () => {
+  const loadWallet = () => {
+    if (showBalance == true)
     setBalance(oldBalance => oldBalance + 1000);
   }
 
@@ -60,7 +61,7 @@ function App(props) {
     const newCoinData = coinData.map( function(values) {
       let newValues = {...values};
       if (valueChangeId === values.key) {
-        if (balance > newValues.price) {
+        if (balance > newValues.price && showBalance == true) {
           newValues.balance += balanceChange;
           setBalance( oldBalance => oldBalance - balanceChange * newValues.price );
         } else if (!isBuy) {
@@ -103,7 +104,7 @@ function App(props) {
           <AccountBalance 
             amount={balance} 
             showBalance={showBalance} 
-            depositOneThousand={depositOneThousand}
+            loadWallet={loadWallet}
             setBalanceDisplay={setBalanceDisplay}/>
           <CoinList 
             coinData={coinData} 
