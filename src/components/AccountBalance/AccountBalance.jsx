@@ -13,21 +13,6 @@ const Td = styled.td`
 
 const TdSearch = styled(Td)`
 `
-const Input = styled.input`
-    padding-left: 10px;
-    width: 150px;
-    height: 30px;
-    border-radius: 4px;
-    border: none;
-    background-image: linear-gradient(
-    -225deg,
-    #78744C 0%,
-    #807540 40%,
-    #828152 100%
-
-    );
- 
-`
 
 const TdActions = styled(Td)`
     width: 63vw;
@@ -79,28 +64,17 @@ export default function AccountBalance(props) {
         content = <div><I3 className="fas fa-eye-slash"></I3></div>
     }
 
-    const handleChange = e => {
-        setSearch(props.tickerId);
-      };
-
     const buttonClass = 'btn ' + (props.showBalance ? 'btn-warning' : 'btn-info');
+
+    const handleChange = e => {
+        setSearch(e.target.value)
+      }
+
     return (
         <>
         <Balance>{content}</Balance>
-
         <Tr>
         <Td>
-            <div className='coin-search'>
-            <form>
-            <Input
-                className='coin-input'
-                type='text'
-                onChange={handleChange}
-                placeholder='Search'
-
-            />
-            </form>
-            </div>
         </Td>
         <TdActions>
         <HideShowBalance 
