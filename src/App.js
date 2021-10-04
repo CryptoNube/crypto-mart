@@ -8,6 +8,7 @@ import 'bootswatch/dist/darkly/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/js/all';
 
 
+
 const Div = styled.div`
     text-align: center;
     background-color: #303030;
@@ -22,6 +23,7 @@ function App(props) {
   const [balance, setBalance] = useState(10000);
   const [showBalance, setShowBalance] = useState(false);
   const [coinData, setCoinData] = useState([]);
+
 
   const componentDidMount = async () => {
     let response = await axios.get('https://api.coingecko.com/api/v3/coins/markets', {
@@ -43,6 +45,7 @@ function App(props) {
     });
     setCoinData(coinData);
   }
+
 
   useEffect(function() {
     if (coinData.length === 0) {

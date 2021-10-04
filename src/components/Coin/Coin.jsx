@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import ChartData from '../MiniChart/ChartData';
 
 const Td = styled.td`
     width: 14vw;
@@ -66,7 +67,7 @@ export default function Coin(props) {
             ? (<i className='fas fa-sort-down align-top mr-1'></i>)
             : (<i className='fas fa-sort-up align-bottom mr-1'></i>)}
             {props.priceChange24h}%</Td>
-            <Td></Td>
+            <Td><ChartData/></Td>
             <Td>{props.showBalance ? props.balance : <div><I className="fas fa-eye-slash"></I></div>}</Td>
             <TdControls>
                 <form action='#' method='POST'>

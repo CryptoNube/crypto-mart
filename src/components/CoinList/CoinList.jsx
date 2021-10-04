@@ -88,7 +88,7 @@ export default function CoinList(props) {
         </thead>
         <tbody>
           {
-            filteredCoins.map( ({key, image, name, ticker, price, priceChange24h, balance}) => 
+            filteredCoins.map( ({key, image, name, ticker, price, priceChange24h, balance, prices}) => 
             <Coin
               key={key}
               handleRefresh={props.handleRefresh}
@@ -101,6 +101,7 @@ export default function CoinList(props) {
               price={price}
               priceChange24h={priceChange24h}
               tickerId={key}
+              prices={prices}
             />)
           }
           </tbody>
