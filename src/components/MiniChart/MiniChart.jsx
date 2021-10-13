@@ -16,7 +16,7 @@ new Chartjs(chartRef.current, {
                         label: '# of Votes',
                         data: day,
                         borderWidth: 2,
-                        borderColor: 'rgba(174, 305, 194, 0.4)',
+                        borderColor: 'rgba(128, 117, 64, 0.8)',
                         pointRadius: 0,
                         hover: false,
                     }],

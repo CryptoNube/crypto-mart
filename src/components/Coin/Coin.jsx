@@ -54,11 +54,9 @@ export default function Coin(props) {
             <Td><Img src={props.image} alt='#'/></Td>
             <Td>{props.name}</Td> 
             <TdSymbol>{props.ticker}</TdSymbol> 
-            <Td
-            className = {props.priceChange24h < 0 
-                ? 'text-danger mr-2' 
-                : 'text-success'}>
-                ${props.price}</Td> 
+            <Td>
+                ${props.price}
+            </Td> 
             <Td 
             className={props.priceChange24h < 0 
             ? 'text-danger mr-2' 
@@ -67,7 +65,12 @@ export default function Coin(props) {
             ? (<i className='fas fa-sort-down align-top mr-1'></i>)
             : (<i className='fas fa-sort-up align-bottom mr-1'></i>)}
             {props.priceChange24h}%</Td>
-            <Td><ChartData/></Td>
+            <Td><ChartData 
+                key={props.key}
+                name={props.name}
+                id={props.id}
+                priceChange24h={props.priceChange24h}
+                /></Td>
             <Td>{props.showBalance ? props.balance : <div><I className="fas fa-eye-slash"></I></div>}</Td>
             <TdControls>
                 <form action='#' method='POST'>

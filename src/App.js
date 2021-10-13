@@ -35,6 +35,7 @@ function App(props) {
     let coinData = response.data.slice(0, COIN_COUNT).map( function(token) {
       return {
         key: token.id,
+        id: token.id,
         image: token.image,
         name: token.name,
         ticker: token.symbol,

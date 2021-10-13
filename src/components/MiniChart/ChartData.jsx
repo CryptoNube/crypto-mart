@@ -20,7 +20,7 @@ const ChartData = (props) => {
     useEffect(() => {
         const fetchData = async () => {
 
-            const results = await axios.get(`https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/`, {
+            const results = await axios.get(`https://api.coingecko.com/api/v3/coins/${props.id}/market_chart/`, {
                 params: {
                     vs_currency: 'cad',
                     days: '1',
