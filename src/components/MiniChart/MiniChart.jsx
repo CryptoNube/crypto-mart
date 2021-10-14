@@ -24,7 +24,7 @@ new Chartjs(chartRef.current, {
                 options: historyOptions,                
             });
         }
-    });
+    }, []);
 
     return (
         <div>
