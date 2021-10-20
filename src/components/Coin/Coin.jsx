@@ -41,7 +41,7 @@ export default function Coin(props) {
      }    
 
      const handleSell = (event) => {
-        if (props.balance > 0) {
+        if (props.balance > 0 && props.showBalance === true) {
             event.preventDefault();
         props.transaction(false, props.tickerId);
         } else {
