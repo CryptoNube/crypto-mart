@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import logo from './logo.png';
+import Widget from '../Widget/Widget';
 
 const Img = styled.img`
     height: 8rem;
@@ -36,6 +37,8 @@ export default class AppHeader extends Component {
                 <H1>
                 CryptoMart
                 </H1>
+                <br></br>
+                <Widget/>
             </Header>
  
         )
