@@ -79,6 +79,7 @@ export default function CoinList(props) {
               <Button className='btn' onClick={handleRefresh}>
                 <I className="fas fa-redo-alt"></I>
               </Button>
+              <div>Price</div>
             </Th>
             <Th>24h</Th>
             <Th>History</Th>

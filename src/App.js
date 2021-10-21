@@ -15,7 +15,7 @@ const Div = styled.div`
     color: #cccccc;
 `;
 
-const COIN_COUNT = 25;
+const COIN_COUNT = 30;
 const formatPrice = price => parseFloat(Number(price).toFixed(4));
 
 function App(props) {

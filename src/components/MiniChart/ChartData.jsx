@@ -26,10 +26,10 @@ const ChartData = (props) => {
                     days: '1',
                 },
             });
-
             setChartData(formatData(results.data.prices));
             setIsLoading(false)
         };
+
         fetchData();
     }, []);
 

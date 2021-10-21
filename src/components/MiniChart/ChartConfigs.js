@@ -1,21 +1,17 @@
 export const historyOptions = {
 
-    animation: {
-        duration: 2000
-    },
-
-
     legend: {
             display: false,
     },
-
+    
     gridLines: {
         display: false,
     },
 
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
     responsive: false,
     hover: false,
+
 
 
     scales: {

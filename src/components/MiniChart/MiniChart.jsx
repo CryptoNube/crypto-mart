@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import Chartjs from 'chart.js';
 import { historyOptions } from './ChartConfigs';
 
-
 const MiniChart = ({data}) => {
     const chartRef = useRef();
     const day = data;

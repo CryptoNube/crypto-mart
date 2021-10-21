@@ -10,7 +10,9 @@ const Td = styled.td`
 const I = styled.i`
     color: #807540;
 `
-
+const Div = styled.div`
+    justify-content: flex-end;
+`
 const TdControls = styled(Td)`
     width: 20vw;
 `;

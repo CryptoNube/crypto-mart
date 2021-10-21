@@ -6,7 +6,6 @@ import Widget from '../Widget/Widget';
 const Img = styled.img`
     height: 8rem;
     margin-left: 20px;
-    margin-right: 20px;
     margin-top: 10px;
     pointer-events: none;
 `;
@@ -23,7 +22,6 @@ const Header = styled.header`
 
 const H1 = styled.h1`
     font-family: 'Nunito', sans-serif;
-    margin-left: 5px;
     font-size: 3.5rem;
     fold-weight: bold;
     min-width: 300px;
