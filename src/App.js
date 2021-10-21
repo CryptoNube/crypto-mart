@@ -80,26 +80,28 @@ function App(props) {
   const setBalanceDisplay = () => {
     setShowBalance(oldValue => !oldValue )
   }
-  const handleRefresh = async (valueChangeId) => {
+  const handleRefresh = async () => {
     let response = await axios.get('https://api.coingecko.com/api/v3/coins/markets', {
       params: {
         vs_currency: 'cad',
         ids: ''
       }
     });
-  
-    let coinData = response.data.slice(0, COIN_COUNT).map( function(token) {
+    let i = 0;
+    let newCoinData = response.data.slice(0, COIN_COUNT).map( function(token) {
+      const index = i;
+      i++;
       return {
         key: token.id,
         image: token.image,
         name: token.name,
         ticker: token.symbol,
-        balance: 0,
+        balance: coinData[index].balance,
         price: formatPrice(token.current_price),
         priceChange24h: parseFloat(Number(token.price_change_percentage_24h).toFixed(2)),
       };
     });
-    setCoinData(coinData);
+    setCoinData(newCoinData);
   }
       return (
         <Div className="App">

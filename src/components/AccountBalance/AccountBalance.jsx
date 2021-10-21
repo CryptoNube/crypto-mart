@@ -54,8 +54,6 @@ var formatter = Intl.NumberFormat('en-US', {
 
 
 export default function AccountBalance(props) {
-    const [search, setSearch] = useState(''); 
-
     //const buttonText = props.showBalance ? 'fas fa-wallet ' : 'fas fa-user-secret';
     let content = '\u00a0';
     if ( props.showBalance ) {
@@ -63,12 +61,8 @@ export default function AccountBalance(props) {
     } else {
         content = <div><I3 className="fas fa-eye-slash"></I3></div>
     }
-
+    
     const buttonClass = 'btn ' + (props.showBalance ? 'btn-warning' : 'btn-info');
-
-    const handleChange = e => {
-        setSearch(e.target.value)
-      }
 
     return (
         <>
@@ -93,10 +87,6 @@ export default function AccountBalance(props) {
         </>
     );
 }
-
-
-
-
 
 AccountBalance.propTypes = {
     amount: PropTypes.number.isRequired,
