@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -10,9 +10,6 @@ const Tr = styled.tr`
 const Td = styled.td`
     width: 23vw;
 `;
-
-const TdSearch = styled(Td)`
-`
 
 const TdActions = styled(Td)`
     width: 63vw;
@@ -62,8 +59,6 @@ export default function AccountBalance(props) {
         content = <div><I3 className="fas fa-eye-slash"></I3></div>
     }
     
-    const buttonClass = 'btn ' + (props.showBalance ? 'btn-warning' : 'btn-info');
-
     return (
         <>
         <Balance>{content}</Balance>

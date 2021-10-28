@@ -23,7 +23,7 @@ new Chartjs(chartRef.current, {
                 options: historyOptions,                
             });
         }
-    }, []);
+    }, [day]);
 
     return (
         <div>

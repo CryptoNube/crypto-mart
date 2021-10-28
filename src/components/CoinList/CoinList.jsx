@@ -35,8 +35,7 @@ const Input = styled.input`
     #828152 100%
 
     );
- 
-`
+ `
 
 const Th = styled.th`
 
@@ -57,6 +56,7 @@ export default function CoinList(props) {
     const filteredCoins = props.coinData.filter(coin => 
       coin.name.toLowerCase().includes(search.toLowerCase())
     );
+
 
     return (
       <><div className='coin-search'>

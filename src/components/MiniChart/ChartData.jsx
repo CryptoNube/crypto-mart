@@ -31,7 +31,7 @@ const ChartData = (props) => {
         };
 
         fetchData();
-    }, []);
+    }, [props.id]);
 
 
     const renderData = () => {
