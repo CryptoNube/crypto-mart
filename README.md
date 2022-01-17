@@ -18,3 +18,5 @@ Changes:
 5. Add individual mini charts with chartjs and data from coingecko api.
 
 6. Add search.
+
+7. Change to CAD
