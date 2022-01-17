@@ -57,6 +57,9 @@ export default function CoinList(props) {
       coin.name.toLowerCase().includes(search.toLowerCase())
     );
 
+    /*<Button className='btn' onClick={handleRefresh}>
+    <I className="fas fa-redo-alt"></I>
+    </Button>*/
 
     return (
       <><div className='coin-search'>
@@ -76,9 +79,7 @@ export default function CoinList(props) {
             <Th>Name</Th>
             <Th>Symbol</Th>
             <Th>
-              <Button className='btn' onClick={handleRefresh}>
-                <I className="fas fa-redo-alt"></I>
-              </Button>
+
               <div>Price</div>
             </Th>
             <Th>24h</Th>
