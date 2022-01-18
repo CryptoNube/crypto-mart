@@ -13,7 +13,7 @@ Changes:
 
 3. Prevent buy and/or sell when insufficient balances.
 
-4. Add coin symbols from coingecko api.
+4. Add coin icons from coingecko api.
 
 5. Add individual mini charts with chartjs and data from coingecko api.
 
